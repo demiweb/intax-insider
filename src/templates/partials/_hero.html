@@ -1,0 +1,59 @@
+<!-- begin hero -->
+<section class="hero">
+  <div class="hero__bg">
+    <video
+      class="js-lazy"
+      src=""
+      autoplay=""
+      muted=""
+      loop=""
+      playsinline=""
+      data-src="./video/video-bg.mp4"></video>
+  </div>
+
+  <div class="container">
+    <div class="hero__inner">
+      <div class="hero__content">
+        <div class="hero__upttl">
+          <!-- begin date-label -->
+          <div class="date-label">
+            <div class="date-label__title">онлайн-площадка</div>
+          </div>
+          <!-- end date-label -->
+        </div>
+
+        <div class="hero__title">
+          <h1 class="title title--h1">Intax Insider</h1>
+        </div>
+
+        <div class="hero__subttl">
+          Международная площадка, на которой вы найдете информацию об актуальных вебинарах и конференциях, 
+посвященных финансам, структурированию доходов, юридическим вопросам бизнеса и т.д.
+        </div>
+
+        {% if page !== 'page-after' %}
+        <div class="hero__btns">
+          <div class="hero__btn">
+            {{ mixins.btn(
+              title = 'Предстоящие события',
+              mod = 'btn--lg btn--full js-popup-open',
+              href = false,
+              attributes = { 'data-popup-target': 'registration' }
+            ) }}
+          </div>
+
+          <div class="hero__btn">
+            {{ mixins.btn(
+              title = 'стать спикером',
+              mod = 'btn--lg btn--full btn--transp js-popup-open',
+              href = false,
+              attributes = { 'data-popup-target': 'speaker-reg' }
+            ) }}
+          </div>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end hero -->

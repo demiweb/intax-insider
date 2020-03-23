@@ -1,0 +1,74 @@
+<!-- begin section -->
+<section class="section pb-0">
+  <div class="container">
+      <h2 class="title title--h2 text-center">Предстоящие мероприятия</h2>
+
+    <!-- begin slider -->
+    <div class="slider__wrap slider--speakers__wrap">
+      <div class="swiper-container js-slider" data-slider="items">
+        <div class="swiper-wrapper slider">
+          {% for i in range(0, 5) %}
+          <div class="swiper-slide slide card">
+            <div
+              class="card__img js-lazy"
+              data-background-image="./img/5.jpg"
+            ></div>
+
+            <div class="card__content">
+               <a href="#" class="card__title card__title--lg">
+                16.04.2020
+              </a>
+
+              <div class="card__text text-overflow">
+                Стратегия богатства в 2020 году: рекомендации 
+состоятельным частным клиентам в России по защите и приумножению состояния от лидеров индустрии.
+              </div>
+
+              <div class="card__people card-people">
+                <div class="card-people__title">
+                  <strong>
+                    <em>Спикер:</em>
+                  </strong>
+                </div>
+                <ul class="card-people__list">
+                  <li class="accent">Вадим Нойман (Швейцария)</li>
+                  <li class="accent">Владимир Олейненко (Кипр)</li>
+                  <li class="accent">Вадим Нойман (Швейцария)</li>
+                  <li class="accent">Владимир Олейненко (Кипр)</li>
+                </ul>                
+              </div>
+
+              <div class="card__hashtags hashtags">
+                {% include "partials/_hashtags.html" %}
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="slider__controls">
+        <button class="slider__prev prev js-slider-prev">{{ mixins.icon('left-arrow') }}</button>
+        <button class="slider__nex next js-slider-next">{{ mixins.icon('left-arrow') }}</button>
+      </div>
+    </div>
+    <!-- end slider -->
+    
+    <div class="section__btns">
+      <div class="section__btn">
+        {{ mixins.btn(
+          title = 'все предстоящие мероприятия',
+          mod = 'btn--lg btn--wide'
+        ) }}
+      </div>
+
+      <div class="section__btn">
+        {{ mixins.btn(
+          title = 'все прошедшие мероприятия',
+          mod = 'btn--lg btn--wide btn--transp'
+        ) }}
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end section -->

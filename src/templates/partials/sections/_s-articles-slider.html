@@ -1,0 +1,69 @@
+<!-- begin section -->
+<section class="section pb-0">
+  <div class="container">
+      <h2 class="title title--h2 text-center">статьи от экспертов</h2>
+
+    <!-- begin slider -->
+    <div class="slider__wrap slider--speakers__wrap">
+      <div class="swiper-container js-slider" data-slider="items">
+        <div class="swiper-wrapper slider">
+          {% for i in range(0, 5) %}
+          <div class="swiper-slide slide card">
+            <div
+              class="card__img js-lazy"
+              data-background-image="./img/article-01.jpg"
+            ></div>
+
+            <div class="card__meta card-meta">
+              <div class="card-meta__item">
+                {{ mixins.icon('account') }}
+                Алексей Стороженко
+              </div>
+
+              <div class="card-meta__item">
+                {{ mixins.icon('clock') }}
+                16.04.2020
+              </div>
+            </div>
+
+
+            <div class="card__content">
+             
+              <a href="#" class="card__title title title--h3 title-under title-under--light">
+                Чем мы помогаем бизнес-сообществу
+              </a>
+
+              
+
+              <div class="card__text text-overflow">
+                Организовываем постоянное общение ведущих мировых экспертов, создаем лучшие события, задача которых – дать самую актуальную и эксклюзивную информацию, наладить все деловые отношения с коллегами и партнерами...
+              </div>
+
+              
+
+              <div class="card__hashtags hashtags">
+                {% include "partials/_hashtags.html" %}
+              </div>
+
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="slider__controls">
+        <button class="slider__prev prev js-slider-prev">{{ mixins.icon('left-arrow') }}</button>
+        <button class="slider__nex next js-slider-next">{{ mixins.icon('left-arrow') }}</button>
+      </div>
+    </div>
+    <!-- end slider -->
+
+    <div class="section__btn">
+      {{ mixins.btn(
+        title = 'перейти ко всем статьям',
+        mod = ''
+      ) }}
+    </div>
+  </div>
+</section>
+<!-- end section -->

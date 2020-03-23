@@ -1,0 +1,39 @@
+.form
+  &__field
+    +notlast
+      margin-bottom: 15px
+    &--btn
+      margin-top: 15px
+      position: relative
+      z-index: 1
+    &--checkbox
+      margin-top: 30px
+  &__title
+    margin-bottom: 20px
+    +md
+      margin-bottom: 10px
+  &__title-sm
+    font-weight: 700
+    margin-bottom: 5px
+  &__subttl-sm
+    font-size: em(14)
+    color: $gray-light
+    margin-bottom: 15px
+  &__block
+    padding-top: 45px
+    padding-bottom: 45px
+    position: relative
+    +lg
+      padding-top: 30px
+      padding-bottom: 30px
+    +notlast
+      +before
+        position: absolute
+        border-top: 1px solid  $gray-lightest
+        bottom: 0
+        left: 50%
+        transform: translate(-50%, 0)
+        width: 690px
+
+    &--hidden
+      display: none

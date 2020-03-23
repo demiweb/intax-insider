@@ -1,0 +1,38 @@
+{%set
+blocks = [
+  {
+    id: 'sponsors',
+    title: 'Спонсоры',
+    btn: {
+      title: 'стать спонсором',
+      mod: 'btn--wide js-popup-open',
+      attributes: { 'data-popup-target': 'sponsor-reg' }
+    }
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section{% if page === 'page-after' %} pb-0{% endif %}">
+  <div class="container">
+    {% for i in blocks %}
+    <div class="section__block">
+      <h2 class="title title--h2 text-center">{{ i.title | safe }}</h2>
+
+      {% include "partials/_sponsors-slider.html" %}
+
+      {% if page !== 'page-after' %}
+      <div class="section__btn">
+        {{ mixins.btn(
+          title = i.btn.title,
+          mod = i.btn.mod or 'btn--wide',
+          href = false,
+          attributes = i.btn.attributes
+        ) }}
+      </div>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</section>
+<!-- end section -->

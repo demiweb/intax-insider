@@ -1,0 +1,40 @@
+<!-- begin section -->
+<section class="section{% if page !== 'page-after' %} section--gray{% endif %}">
+  <div class="container">
+    {% if page === 'page-after' %}
+    <h2 class="title title--h2 text-center">как это было в 2020 году</h2>
+    {% else %}
+    <h2 class="title title--h2 text-center">как это было в 2019</h2>
+    {% endif %}
+
+    <!-- begin slider -->
+    <div class="slider__wrap slider--gallery__wrap">
+      <div class="swiper-container js-slider" data-slider="gallery">
+        <div class="swiper-wrapper slider js-lightgallery">
+          {% for i in range(0, 6) %}
+          <a
+            href="./img/528.jpg"
+            class="swiper-slide slide js-lazy"
+            data-background-image="./img/528.jpg"></a>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="slider__controls">
+        <button class="slider__prev prev js-slider-prev">{{ mixins.icon('left-arrow') }}</button>
+        <button class="slider__next next js-slider-next">{{ mixins.icon('left-arrow') }}</button>
+      </div>
+    </div>
+    <!-- end slider -->
+
+    {% if page === 'page-after' %}
+    <div class="section__btn">
+      {{ mixins.btn(
+        title = 'смотреть все фотографии',
+        mod = ''
+      ) }}
+    </div>
+    {% endif %}
+  </div>
+</section>
+<!-- end section -->

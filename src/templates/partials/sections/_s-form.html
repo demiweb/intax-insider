@@ -1,0 +1,64 @@
+{%set
+form = {
+  titleSm: 'Оставьте ваши контактные данные ниже',
+  btn: {
+    title: 'подписаться на рассылку'
+  },
+  fields: [
+    {
+      name: 'input',
+      type: 'text',
+      placeholder: 'Имя',
+      fieldClass: '',
+      fieldAttributes: {},
+      options: [],
+      label: { last: '' }
+    },
+    {
+      name: 'input',
+      type: 'text',
+      placeholder: 'название компании',
+      fieldClass: '',
+      fieldAttributes: {},
+      options: [],
+      label: { last: '' }
+    },
+    {
+      name: 'input',
+      type: 'tel',
+      placeholder: 'телефон',
+      fieldClass: '',
+      fieldAttributes: {},
+      options: [],
+      label: { last: '' }
+    },
+    {
+      name: 'Электронный адрес ',
+      type: 'email',
+      placeholder: 'Имя',
+      fieldClass: '',
+      fieldAttributes: {},
+      options: [],
+      label: { last: '' }
+    }
+  ]
+}
+%}
+
+<!-- begin section -->
+<section class="section section--light">
+  <div class="container">
+    <div class="grid">
+      <div class="_col _col-7">
+        <div class="title title--h1-lg">оформляйте подписку</div>
+        <p>Подписывайтесь на рассылку новостей - и получайте уведомления о новых вебинарах и статьях.</p>
+        <img class="js-lazy" src="" alt="" data-src="./img/iphone.png"/>
+      </div>
+
+      <div class="_col _col-5">
+        {% include "partials/_form.html" %}
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end section -->

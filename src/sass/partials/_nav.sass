@@ -1,0 +1,27 @@
+.nav
+  +font-title
+  letter-spacing: .1em
+  li
+    display: inline-block
+    margin-left: 50px
+    margin-right: 50px
+    +lg
+      display: block
+      margin-bottom: 1em
+  a
+    +tr(color .3s)
+    +hover
+      color: $accent
+  &__link
+    &--current
+      color: $accent
+
+  &--footer
+    +font-content
+    letter-spacing: inherit
+    li
+      display: block
+      margin-left: 0
+      margin-right: 0
+      +notlast
+        margin-bottom: em(10)

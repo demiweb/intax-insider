@@ -1,0 +1,54 @@
+.card
+  display: block
+  background-color: $white
+  box-shadow: 0px 0px 10px 0px rgba(1, 0, 0, 0.09)
+  +tr(box-shadow .3s)
+  +hover
+    box-shadow: 0px 0px 21px 0px rgba(1, 0, 0, 0.18)
+
+  &__img
+    display: block
+    +cover
+    background-color: $gray-light
+    padding-top: 60%
+
+  &__content
+    display: block
+    padding: 35px 20px
+
+  &__title
+    display: block
+    margin-bottom: 12px
+    &--lg
+      color: $accent
+      text-transform: uppercase
+      font-size: em(30)
+      
+
+  &__text
+    margin-bottom: 15px
+
+  &__people
+    margin-bottom: 20px
+
+.card-people
+  display: flex
+  &__title
+    // width: 20%
+    margin-right: 10px
+  &__list
+    // width: 80%
+
+.card-meta
+  background-color: $gray-lightest
+  display: flex
+  padding: 10px 20px
+  &__item
+    display: flex
+    align-items: center
+    color: $accent
+    +font-title
+    +notlast
+      margin-right: 20px
+    .icon
+      margin-right: .5em
