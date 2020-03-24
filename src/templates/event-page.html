@@ -1,0 +1,24 @@
+---
+title: event-page
+page: event-page
+breadcrumbs: {
+  list: [
+    { link: 'Главная ' },
+    { item: '-' },
+    { link: 'Вебинары ' },
+    { item: '-' },
+    { item: 'Фонды Лихтенштейна: защита активов...', modItem: 'breadcrumbs__current-item' }
+  ]
+}
+sEvents: {
+  pb: true
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/sections/_s-event-meta.html" %}
+  {% include "partials/sections/_s-event-descr.html" %}
+  {% include "partials/sections/_s-register.html" %}
+  {% include "partials/sections/_s-events-slider.html" %}
+{% endblock %}

@@ -1,18 +1,63 @@
+.speakers
+  height: 100%
+  display: flex
+  justify-content: center
+  flex-direction: column
+  .speaker
+    +notlast
+      margin-bottom: 20px
+
+    &:first-child:nth-last-child(1) 
+      .speaker__img
+        width: 40%
+        padding-top: 50%    
+
+    &:first-child:nth-last-child(2),
+    &:first-child:nth-last-child(2) ~ .speaker 
+      .speaker__img
+        width: 27%
+        padding-top: 30%    
+
+    &:first-child:nth-last-child(3),
+    &:first-child:nth-last-child(3) ~ .speaker
+      .speaker__img
+        width: 18%
+        padding-top: 20%    
+
+    &:first-child:nth-last-child(4),
+    &:first-child:nth-last-child(4) ~ .speaker
+      .speaker__img
+        width: 13%
+        padding-top: 14%
+    
+
 .speaker
-  +flex(flex-start, normal, column)
+  display: flex
+  // flex-wrap: wrap
+  align-items: center
   height: auto
+  
   &__img
-    +cover
-    padding-top: 110%
+    +cover    
     clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%)
+    padding-top: 50%
+    width: 40%
+
   &__content
-    padding-top: 25px
+    // width: 80%
+    padding-left: 1%
     flex-grow: 1
-    +flex(flex-start, normal, column)
     +md
       padding-top: 15px
   &__title
+    display: inline-flex
+    align-items: center
     margin-bottom: 10px
+    padding-bottom: 10px
+    border-bottom: 2px solid  $accent
+    .title
+      margin-left: .2em
+      flex-grow: 1
     
   &__text
     margin-bottom: 10px
@@ -22,7 +67,3 @@
       text-decoration: underline
     em
       color: $accent
-      // margin-bottom: 30px
-      // display: inline-block
-      // +sm
-      //   margin-bottom: 15px

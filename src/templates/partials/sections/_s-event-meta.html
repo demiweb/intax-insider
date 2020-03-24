@@ -1,0 +1,75 @@
+{%set
+blocks = [
+  {
+    icon: 'pin',
+    title: 'InterContinental Kiev',
+    text: 'г. Киев, ул. Большая Житомирская, 2A'
+  },
+  {
+    icon: 'wallet',
+    title: '3500 - 8300 грн',
+    text: 'Стоимость зависит от вашего статуса на мероприятии'
+  },
+  {
+    icon: 'clock-2',
+    title: '16.04.2020',
+    text: '18:00 (Продолжительность: 3 часа)'
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="">
+  <div class="container">
+    <div class="grid">
+      <div class="_col-6">
+        <img class="shadow js-lazy" src="" alt="" data-src="./img/event-page.jpg"/>
+      </div>
+
+      <div class="_col-6">
+        <!-- begin event-meta -->
+        <div class="event-meta">
+          <div class="event-meta__block">
+            <h2 class="title title--h2 accent">Фонды Лихтенштейна</h2>
+            <strong>Защита активов в мире тотальной прозрачности.</strong>
+          </div>
+
+          {% for i in blocks %}
+          <div class="event-meta__block event-meta-block">
+            <div class="event-meta-block__icon">
+              {{ mixins.icon(i.icon) }}
+            </div>
+
+            <div class="event-meta-block__content">
+              <div class="event-meta-block__title">{{ i.title | safe }}</div>
+              {{ i.text | safe }}
+            </div>
+          </div>
+          {% endfor %}
+
+          <div class="event-meta__bottom">
+            <div class="event-meta__btn">
+              {{ mixins.btn(
+                title = 'зарегистрироваться',
+                mod = 'btn--wide-md'
+              ) }}
+            </div>
+
+            {{ mixins.list(
+              name = 'social',
+              modifications = { wrap: '', item: '', link: '' },
+              label = { first: '<div class="social__title">Поделиться в соцсетях:</div>' },
+              list = [
+                { link: mixins.icon('facebook-logo') },
+                { link: mixins.icon('linkedin-letters') },
+                { link: mixins.icon('youtube-logotype') }
+              ]
+            ) }}
+          </div>
+        </div>
+        <!-- end event-meta -->
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end section -->

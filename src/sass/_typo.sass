@@ -56,3 +56,56 @@ h1, h2, h3, h4, h5, h6
   display: -webkit-box
   -webkit-line-clamp: 5
   -webkit-box-orient: vertical
+
+.link
+  text-transform: uppercase
+  color: $accent
+  +font-title
+  font-weight: 300
+  letter-spacing: 0.1em
+  text-align: left
+  +hover
+    text-decoration: underline
+  &--arrow
+    display: inline-block
+    position: relative
+    +after
+      +icon-arrow(.5, .5, .05, currentColor, -45, em)
+      display: inline-block
+      margin-left: .5em
+      position: relative
+      top: -.2em
+
+.link-bold
+  font-weight: 700
+  display: inline-flex
+  align-items: center
+  +tr(color .3s)
+  +hover
+    // color: $accent
+  .icon
+    margin-right: .5em
+    fill: $accent
+    animation: pointLeft 1s $easeOutQuad infinite
+
+// .list
+//   text-transform: uppercase
+//   color: $c-title
+//   +font-title
+//   font-size: em(24)
+//   li
+//     +list-bullet
+//     &::before
+//       margin-right: 1em
+//     +notlast
+//       margin-bottom: .5em
+
+.list
+  font-weight: 700
+  li
+    +notlast
+      margin-bottom: 10px
+    &::before
+      content: '-'
+      display: inline-block
+      margin-right: .2em

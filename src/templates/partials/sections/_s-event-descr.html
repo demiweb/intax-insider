@@ -1,0 +1,105 @@
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    <div class="grid">
+      <div class="_col-6">
+        <h2 class="section__title title title--h2">кратко о мероприятии</h2>
+
+        <article class="article">
+          <p>Вебинар на тему: «Фонды Лихтенштейна. Защита активов в мире тотальной прозрачности» – международная онлайн-конференция о самых актуальных решениях для состоятельных россиян в сферах управления, налогообложения, структурирования и преумножения частного капитала. Какие темы будем разбирать:</p>
+
+          <ul class="list">
+            <li>Как защитить актив в стране, где все прозрачно?</li>
+            <li>Почему в некоторых банках невозможно открыть счет иностраннцам?</li>
+            <li>Как защитить актив в стране, где все прозрачно?</li>
+            <li>Почему в некоторых банках невозможно открыть счет иностраннцам?</li>
+            <li>Как защитить актив в стране, где все прозрачно?</li>
+            <li>Почему в некоторых банках невозможно открыть счет иностраннцам?</li>
+            <li>Как защитить актив в стране, где все прозрачно?</li>
+            <li>Почему в некоторых банках невозможно открыть счет иностраннцам?</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="_col-6">
+        
+        <!-- should be removed on production version -->
+        <select id="speakers" style="width: 100px;">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+        <!-- should be removed on production version -->
+
+        <div class="speakers">
+          {% for i in range(0, 1) %}          
+          <!-- begin speaker -->
+          <div class="speaker">
+            <div class="speaker__img js-lazy" data-background-image="./img/121212.jpg"></div>
+
+            <div class="speaker__content">
+              <div class="speaker__title">
+                Спикер:
+                <div class="title title--h3">ВАДИМ НОЙМАН (ШВЕЙЦАРИЯ)</div>
+              </div>
+              <div>
+                <button
+                  class="speaker__link link js-popup-open"
+                  data-popup-target="info"
+                  data-popup-url="./partials/popup-speaker-1.html"
+                >
+                  подробне о спикере
+                </button>
+              </div>
+              
+            </div>
+          </div>
+          <!-- end speaker -->
+          {% endfor %}
+        </div>
+        
+        <!-- should be removed on production version -->
+        <script>
+         (() => {
+          const template = `
+            <div class="speaker">
+              <div class="speaker__img" style="background-image: url('./img/121212.jpg');"></div>
+
+              <div class="speaker__content">
+                <div class="speaker__title">
+                  Спикер: <div class="title title--h3">ВАДИМ НОЙМАН (ШВЕЙЦАРИЯ)</div>
+                </div>
+                <div>
+                  <button
+                    class="speaker__link link js-popup-open"
+                    data-popup-target="info"
+                    data-popup-url="./partials/popup-speaker-1.html"
+                  >
+                    подробне о спикере
+                  </button>
+                </div>                
+              </div>
+            </div>
+          `
+          const select = document.getElementById('speakers')
+          const wrap = select.nextElementSibling
+
+          select.addEventListener('change', e => {
+            const nmb = +e.currentTarget.value
+            let content = ''
+
+            for (let i = 0; i < nmb; i++) {
+              content += template
+            }
+
+            wrap.innerHTML = content
+          })
+         })()
+        </script>
+        <!-- should be removed on production version -->
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end section -->

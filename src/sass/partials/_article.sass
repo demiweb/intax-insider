@@ -1,0 +1,12 @@
+.article
+  p, ul, ol
+    +notlast
+      margin-bottom: 20px
+
+  ul
+    @extend .list
+    &:not(.list)
+      font-weight: 400
+      li
+        +notlast
+          margin-bottom: 0

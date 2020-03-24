@@ -1,0 +1,65 @@
+{%set
+form = {
+  btn: {
+    title: 'Зарегистрироваться'
+  },
+  fields: [
+    {
+      name: 'input',
+      type: 'text',
+      placeholder: 'Имя',
+      fieldClass: '',
+      fieldAttributes: {},
+      options: [],
+      label: { last: '' }
+    },
+    {
+      name: 'input',
+      type: 'text',
+      placeholder: 'название компании',
+      fieldClass: '',
+      fieldAttributes: {},
+      options: [],
+      label: { last: '' }
+    },
+    {
+      name: 'input',
+      type: 'tel',
+      placeholder: 'телефон',
+      fieldClass: '',
+      fieldAttributes: {},
+      options: [],
+      label: { last: '' }
+    },
+    {
+      name: 'Электронный адрес ',
+      type: 'email',
+      placeholder: 'Имя',
+      fieldClass: '',
+      fieldAttributes: {},
+      options: [],
+      label: { last: '' }
+    }
+  ]
+}
+%}
+
+<!-- begin section -->
+<section class="section section--light">
+  <div class="container">
+    <div class="grid grid--align-items-center">
+      <div class="_col-5">
+        <h2 class="section__title section__title--mb-sm title title--h2 accent">Регистрация</h2>
+        <p>Укажите в форме ваши контактные данные и наш <br>
+        менеджер свяжется с вами в ближайшее время</p>
+
+        {% include "partials/_form.html" %}
+      </div>
+
+      <div class="_col-7">
+        <img class="js-lazy" src="" alt="" data-src="./img/laptop.png"/>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end section -->
