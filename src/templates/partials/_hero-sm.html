@@ -1,5 +1,5 @@
 <!-- begin hero -->
-<section class="hero hero--sm">
+<section class="hero hero--sm{% if hero.mod %} {{ hero.mod }}{% endif %}">
   <div
     class="hero__bg js-lazy"
     data-background-image="./img/hero/{{ hero.bg }}"
@@ -9,10 +9,30 @@
     <div class="hero__inner">
       <div class="hero__content">
         
+        {% if hero.meta %}
+        <div class="hero__meta card-meta">
+          <div class="card-meta__item">
+            {{ mixins.icon('account') }}
+            Алексей Стороженко
+          </div>
+
+          <div class="card-meta__item">
+            {{ mixins.icon('clock') }}
+            16.04.2020
+          </div>
+        </div>
+        {% endif %}
+
         {% if hero.title %}
           <div class="hero__title">
             <h1 class="title title--h1">{{ hero.title | safe }}</h1>
           </div>
+        {% endif %}
+
+        {% if hero.hashtags %}
+        <div class="hero__hashtags hashtags">
+          {% include "partials/_hashtags.html" %}
+        </div>        
         {% endif %}
 
       </div>

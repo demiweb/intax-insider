@@ -1,8 +1,29 @@
 .article
-  p, ul, ol
+  +clr
+
+  h1, h2, h3, h4, h5, h6
+    @extend .title
+
+  h2
+    @extend .title--h2
+    +notlast
+      margin-bottom: 50px
+      +md
+        margin-bottom: 30px
+
+  h3
+    @extend .title--h3
     +notlast
       margin-bottom: 20px
 
+  p, ul, ol, blockquote, img
+    +notlast
+      margin-bottom: 25px
+  
+  blockquote
+    max-width: 693px
+    margin-left: auto
+    margin-right: auto
   ul
     @extend .list
     &:not(.list)
@@ -10,3 +31,23 @@
       li
         +notlast
           margin-bottom: 0
+
+  a
+    color: $blue
+    text-decoration: underline
+
+  img
+    &.alignright
+      float: right
+      margin-left: 30px
+      +md
+        float: none
+        width: 100%
+        margin-left: 0
+    &.alignleft
+      float: left
+      margin-right: 30px
+      +md
+        float: none
+        width: 100%
+        margin-right: 0

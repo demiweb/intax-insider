@@ -12,6 +12,11 @@
     background-color: $gray-light
     padding-top: 60%
 
+  &__meta
+    background-color: #fafafa
+    color: $accent
+    padding: 10px 20px
+
   &__content
     display: block
     padding: 35px 20px
@@ -39,14 +44,13 @@
   &__list
     // width: 80%
 
-.card-meta
-  background-color: $gray-lightest
+.card-meta  
   display: flex
-  padding: 10px 20px
+  
   &__item
     display: flex
     align-items: center
-    color: $accent
+    
     +font-title
     +notlast
       margin-right: 20px

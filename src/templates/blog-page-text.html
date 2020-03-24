@@ -1,0 +1,27 @@
+---
+title: blog-page-text
+page: blog-page-text
+hero: {
+  mod: 'hero--left',
+  meta: true,
+  title: 'Чем мы помогаем бизнес-сообществу',
+  bg: 'scott-webb-kAJE-3_4zHE-unsplash.jpg',
+  breadcrumbs: {
+    list: [
+      { link: 'Главная ' },
+      { item: '-' },
+      { link: 'Статьи от экспертов' },
+      { item: '-' },
+      { item: 'Чем мы помогаем бизнес-сообществу', modItem: 'breadcrumbs__current-item' }
+    ]
+  },
+  hashtags: true
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/_hero-sm.html" %}
+  {% include "partials/sections/_s-blog-page.html" %}
+  {% include "partials/sections/_s-more-articles.html" %}
+{% endblock %}

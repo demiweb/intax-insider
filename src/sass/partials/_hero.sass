@@ -62,8 +62,17 @@
       margin-right: 0
       +notlast
         margin-bottom: 10px
+  &__meta
+    margin-bottom: 10px
+  &__hashtags
+    color: $white
 
   &--sm
     #{$this}__inner
       height: auto
       min-height: 295px
+    #{$this}__content
+      max-width: none
+
+  &--left
+    text-align: left

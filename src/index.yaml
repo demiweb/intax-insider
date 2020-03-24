@@ -4,3 +4,6 @@ PageList:
   - file: landing.html
   - file: event-page.html
   - file: blog.html
+  - file: blog-page.html
+  - file: blog-page-text.html
+  - file: blog-page-img.html
