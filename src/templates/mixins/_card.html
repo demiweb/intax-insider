@@ -1,0 +1,70 @@
+{% from 'mixins/_icon.html' import icon %}
+{% set icon = icon %}
+
+{% macro card(img, mod, hashtags, meta, title, text, people) %}
+<div class="card{% if mod %} {{ mod }}{% endif %}">
+  <div
+    class="card__img js-lazy"
+    data-background-image="./img/{{ img }}"
+  ></div>
+  
+  {% if meta %}
+  <div class="card__meta card-meta">
+    <div class="card-meta__item">
+      {{ icon('account') }}
+      Алексей Стороженко
+    </div>
+
+    <div class="card-meta__item">
+      {{ icon('clock') }}
+      16.04.2020
+    </div>
+  </div>
+  {% endif %}
+
+
+  <div class="card__content">    
+    {% if title.under %}
+    <a href="#" class="card__title title title--h3 title-under title-under--light">
+      {{ title.under or 'Чем мы помогаем бизнес-сообществу' }}
+    </a>
+    {% endif %}
+
+    {% if title.lg %}
+    <a href="#" class="card__title card__title--lg">
+        16.04.2020
+      </a>
+    {% endif %}
+
+    
+    {% if text %}
+    <div class="card__text text-overflow">
+      {{ text | safe }}
+    </div>
+    {% endif %}
+
+    {% if people %}
+    <div class="card__people card-people">
+      <div class="card-people__title">
+        <strong>
+          <em>Спикер:</em>
+        </strong>
+      </div>
+      <ul class="card-people__list">
+        <li class="accent">Вадим Нойман (Швейцария)</li>
+        <li class="accent">Владимир Олейненко (Кипр)</li>
+        <li class="accent">Вадим Нойман (Швейцария)</li>
+        <li class="accent">Владимир Олейненко (Кипр)</li>
+      </ul>                
+    </div>
+    {% endif %}
+
+    
+  {% if hashtags %}
+    <div class="card__hashtags hashtags">
+      {% include "partials/_hashtags.html" %}
+    </div>
+  {% endif %}
+  </div>
+</div>
+{% endmacro %}

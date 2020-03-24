@@ -49,9 +49,25 @@ form = {
   <div class="container">
     <div class="grid grid--align-items-center">
       <div class="_col-5">
-        <h2 class="section__title section__title--mb-sm title title--h2 accent">Регистрация</h2>
+        
+
+        {% if sRegister.title %}
+        <h2 class="section__title section__title--mb-sm title title--h2 accent">
+          {{ sRegister.title | safe  }}
+        </h2>
+        {% else %}
+        <h2 class="section__title section__title--mb-sm title title--h2 accent">
+          Регистрация
+        </h2>
+        {% endif %}
+
+        {% if sRegister.text %}
+        {{ sRegister.text | safe }}
+        {% else %}
         <p>Укажите в форме ваши контактные данные и наш <br>
         менеджер свяжется с вами в ближайшее время</p>
+        {% endif %}
+        
 
         {% include "partials/_form.html" %}
       </div>

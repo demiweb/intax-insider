@@ -1,0 +1,26 @@
+---
+title: past-events
+page: past-events
+hero: {
+  bg: 'wes-hicks-4-EeTnaC1S4-unsplash.jpg',
+  title: 'Прошедшие мероприятия',
+  subttl: 'В этом разделе вы найдете информацию обо всех актуальных <br>
+предстоящих вебинарах и конференциях',
+  breadcrumbs: {
+    list: [
+      { link: 'Главная ' },
+      { item: '-' },
+      { item: 'Прошедшие мероприятия', modItem: 'breadcrumbs__current-item' }
+    ]
+  }
+}
+sEvents: {
+  bottomBtn: true
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+{% include "partials/_hero-sm.html" %}
+{% include "partials/sections/_s-events.html" %}
+{% endblock %}

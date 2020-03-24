@@ -53,8 +53,18 @@ form = {
       <div class="_col-7">
         <div class="grid grid--align-items-center">
           <div class="_col-7">
+            {% if sForm.title %}
+            <h2 class="section__title section__title--mb-sm title title--h2 accent">{{ sForm.title | safe }}</h2>
+            {% else %}
             <h2 class="section__title section__title--mb-sm title title--h2 accent">оформляйте подписку</h2>
+            {% endif %}
+            
+            {% if sForm.text %}
+            {{ sForm.text | safe }}
+            {% else %}
             <p>Подписывайтесь на рассылку новостей - и получайте уведомления о новых вебинарах и статьях.</p>
+            {% endif %}
+            
           </div>
           <div class="_col-5">
             <img class="js-lazy" src="" alt="" data-src="./img/iphone.png"/>

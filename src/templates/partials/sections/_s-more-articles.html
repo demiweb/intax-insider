@@ -6,39 +6,13 @@
     <div class="grid">
       {% for i in range(0, 3) %}
       <div class="_col _col-4">
-        <div class="card">
-            <div
-              class="card__img js-lazy"
-              data-background-image="./img/article-01.jpg"
-            ></div>
-
-            <div class="card__meta card-meta">
-              <div class="card-meta__item">
-                {{ mixins.icon('account') }}
-                Алексей Стороженко
-              </div>
-
-              <div class="card-meta__item">
-                {{ mixins.icon('clock') }}
-                16.04.2020
-              </div>
-            </div>
-
-
-            <div class="card__content">
-             
-              <a href="#" class="card__title title title--h3 title-under title-under--light">
-                Чем мы помогаем бизнес-сообществу
-              </a>
-
-              
-
-              <div class="card__text text-overflow">
-                Организовываем постоянное общение ведущих мировых экспертов, создаем лучшие события, задача которых – дать самую актуальную и эксклюзивную информацию, наладить все деловые отношения с коллегами и партнерами...
-              </div>
-
-            </div>
-          </div>
+        {{ mixins.card(
+            mod = '',
+            img = 'article-01.jpg',
+            meta = true,
+            title = { under: 'Чем мы помогаем бизнес-сообществу' },
+            text = 'Организовываем постоянное общение ведущих мировых экспертов, создаем лучшие события, задача которых – дать самую актуальную и эксклюзивную информацию, наладить все деловые отношения с коллегами и партнерами...'
+        ) }}
       </div>
       {% endfor %}
     </div>

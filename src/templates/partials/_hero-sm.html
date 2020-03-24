@@ -29,6 +29,10 @@
           </div>
         {% endif %}
 
+        {% if hero.subttl %}
+        <div class="hero__subttl">{{ hero.subttl | safe }}</div>
+        {% endif %}
+
         {% if hero.hashtags %}
         <div class="hero__hashtags hashtags">
           {% include "partials/_hashtags.html" %}

@@ -1,0 +1,32 @@
+---
+title: upcoming-events
+page: upcoming-events
+hero: {
+  bg: 'wes-hicks-4-EeTnaC1S4-unsplash.jpg',
+  title: 'вебинары',
+  subttl: 'В этом разделе вы найдете информацию обо всех актуальных <br>
+предстоящих вебинарах и конференциях',
+  breadcrumbs: {
+    list: [
+      { link: 'Главная ' },
+      { item: '-' },
+      { item: 'вебинары', modItem: 'breadcrumbs__current-item' }
+    ]
+  }
+}
+sForm: {
+  title: 'подписка на уведомления <br>
+о предстоящих вебинарах',
+  text: '<p>Подписывайтесь на рассылку о предстоящих вебинарах.</p>'
+}
+sEvents: {
+  tobBtn: true
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+{% include "partials/_hero-sm.html" %}
+{% include "partials/sections/_s-form.html" %}
+{% include "partials/sections/_s-events.html" %}
+{% endblock %}

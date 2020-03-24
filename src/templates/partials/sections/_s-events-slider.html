@@ -8,41 +8,15 @@
       <div class="swiper-container js-slider" data-slider="items">
         <div class="swiper-wrapper slider">
           {% for i in range(0, 5) %}
-          <div class="swiper-slide slide card">
-            <div
-              class="card__img js-lazy"
-              data-background-image="./img/5.jpg"
-            ></div>
-
-            <div class="card__content">
-               <a href="#" class="card__title card__title--lg">
-                16.04.2020
-              </a>
-
-              <div class="card__text text-overflow">
-                Стратегия богатства в 2020 году: рекомендации 
-состоятельным частным клиентам в России по защите и приумножению состояния от лидеров индустрии.
-              </div>
-
-              <div class="card__people card-people">
-                <div class="card-people__title">
-                  <strong>
-                    <em>Спикер:</em>
-                  </strong>
-                </div>
-                <ul class="card-people__list">
-                  <li class="accent">Вадим Нойман (Швейцария)</li>
-                  <li class="accent">Владимир Олейненко (Кипр)</li>
-                  <li class="accent">Вадим Нойман (Швейцария)</li>
-                  <li class="accent">Владимир Олейненко (Кипр)</li>
-                </ul>                
-              </div>
-
-              <div class="card__hashtags hashtags">
-                {% include "partials/_hashtags.html" %}
-              </div>
-            </div>
-          </div>
+          {{ mixins.card(
+            mod = 'swiper-slide slide',
+            img = '5.jpg',
+            title = { lg: true },
+            text = 'Стратегия богатства в 2020 году: рекомендации 
+                состоятельным частным клиентам в России по защите и приумножению состояния от лидеров индустрии.',
+            people = true,
+            hashtags = true
+          ) }}
           {% endfor %}
         </div>
       </div>

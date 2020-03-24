@@ -1,70 +1,20 @@
 <!-- begin section -->
 <section class="section">
   <div class="container">
-    <div class="section__select">
-      <div class="title title--h3">Сортировать по тематике:</div>
-      
-      {{ mixins.input(
-        name = 'select',
-        mod = 'input--select-fancy',
-        type = '',
-        placeholder = '',
-        value = '',
-        fieldClass = 'js-select',
-        options = [
-          { value: '1', option: 'Международное налогообложение и структурирование' },
-          { value: '2', option: 'Международное налогообложение состоятельных лиц' },
-          { value: '3', option: 'Планирование наследования' },
-          { value: '4', option: 'Релокация и инвестиционная миграция' },
-          { value: '5', option: 'Финансовые инструменты' },
-          { value: '6', option: 'Инвестирование' },
-          { value: '7', option: 'Sales&Marketing in Wealth Management' }
-        ]
-      ) }}
-    </div>
+    {% include "partials/_top-select.html" %}
 
     <div class="grid">
       {% for i in range(0, 9) %}
       <div class="_col-4">
-        <div class="card">
-            <div
-              class="card__img js-lazy"
-              data-background-image="./img/article-01.jpg"
-            ></div>
+        {{ mixins.card(
+            mod = '',
+            img = 'article-01.jpg',
+            meta = true,
+            title = { under: 'Чем мы помогаем бизнес-сообществу' },
+            text = 'Организовываем постоянное общение ведущих мировых экспертов, создаем лучшие события, задача которых – дать самую актуальную и эксклюзивную информацию, наладить все деловые отношения с коллегами и партнерами...',
+            hashtags = true
+          ) }}
 
-            <div class="card__meta card-meta">
-              <div class="card-meta__item">
-                {{ mixins.icon('account') }}
-                Алексей Стороженко
-              </div>
-
-              <div class="card-meta__item">
-                {{ mixins.icon('clock') }}
-                16.04.2020
-              </div>
-            </div>
-
-
-            <div class="card__content">
-             
-              <a href="#" class="card__title title title--h3 title-under title-under--light">
-                Чем мы помогаем бизнес-сообществу
-              </a>
-
-              
-
-              <div class="card__text text-overflow">
-                Организовываем постоянное общение ведущих мировых экспертов, создаем лучшие события, задача которых – дать самую актуальную и эксклюзивную информацию, наладить все деловые отношения с коллегами и партнерами...
-              </div>
-
-              
-
-              <div class="card__hashtags hashtags">
-                {% include "partials/_hashtags.html" %}
-              </div>
-
-            </div>
-          </div>
       </div>
       {% endfor %}
     </div>

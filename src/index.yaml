@@ -7,3 +7,5 @@ PageList:
   - file: blog-page.html
   - file: blog-page-text.html
   - file: blog-page-img.html
+  - file: past-events.html
+  - file: upcoming-events.html

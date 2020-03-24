@@ -1,0 +1,21 @@
+<div class="section__select">
+  <div class="title title--h3">Сортировать по тематике:</div>
+  
+  {{ mixins.input(
+    name = 'select',
+    mod = 'input--select-fancy',
+    type = '',
+    placeholder = '',
+    value = '',
+    fieldClass = 'js-select',
+    options = [
+      { value: '1', option: 'Международное налогообложение и структурирование' },
+      { value: '2', option: 'Международное налогообложение состоятельных лиц' },
+      { value: '3', option: 'Планирование наследования' },
+      { value: '4', option: 'Релокация и инвестиционная миграция' },
+      { value: '5', option: 'Финансовые инструменты' },
+      { value: '6', option: 'Инвестирование' },
+      { value: '7', option: 'Sales&Marketing in Wealth Management' }
+    ]
+  ) }}
+</div>

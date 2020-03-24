@@ -1,0 +1,45 @@
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    {% if sEvents.tobBtn %}
+    <div class="section__block section__block--md text-center">
+      {{ mixins.btn(
+        title = 'стать спикером',
+        mod = 'btn--wide-md btn--transp js-popup-open',
+        href = false,
+        attributes = { 'data-popup-target': 'speaker-reg'}
+      ) }}
+    </div>
+    {% endif %}
+
+    {% include "partials/_top-select.html" %}
+
+    <div class="grid">
+      {% for i in range(0, 9) %}
+      <div class="_col-4">
+        {{ mixins.card(
+          mod = 'swiper-slide slide',
+          img = '5.jpg',
+          title = { lg: true },
+          text = 'Стратегия богатства в 2020 году: рекомендации 
+              состоятельным частным клиентам в России по защите и приумножению состояния от лидеров индустрии.',
+          people = true,
+          hashtags = true
+        ) }}
+      </div>
+      {% endfor %}
+    </div>
+
+    {% include "partials/_pagination.html" %}
+
+    {% if sEvents.bottomBtn %}
+      <div class="section__btn">
+        {{ mixins.btn(
+          title = 'вернуться на главную',
+          mod = 'btn--wide-md'
+        ) }}
+      </div>
+    {% endif %}
+  </div>
+</section>
+<!-- end section -->
