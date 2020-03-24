@@ -1,0 +1,22 @@
+<!-- begin hero -->
+<section class="hero hero--sm">
+  <div
+    class="hero__bg js-lazy"
+    data-background-image="./img/hero/{{ hero.bg }}"
+  ></div>
+
+  <div class="container">
+    <div class="hero__inner">
+      <div class="hero__content">
+        
+        {% if hero.title %}
+          <div class="hero__title">
+            <h1 class="title title--h1">{{ hero.title | safe }}</h1>
+          </div>
+        {% endif %}
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end hero -->

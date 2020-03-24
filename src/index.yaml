@@ -3,3 +3,4 @@ ProjectTitle: intax
 PageList:
   - file: landing.html
   - file: event-page.html
+  - file: blog.html

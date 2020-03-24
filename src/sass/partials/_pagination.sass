@@ -1,0 +1,27 @@
+.pagination
+  margin-top: 30px
+  margin-bottom: 30px
+  text-align: center
+  li
+    display: inline-block
+    vertical-align: middle
+    margin-left: 6px
+    margin-right: 6px
+  a
+    background-color: $white
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.13)
+    height: 35px
+    min-width: 35px
+    display: flex
+    align-items: center
+    justify-content: center
+    +tr(color .3s)
+    +hover
+      color: $accent
+
+  .prev, .next
+    background-color: transparent
+    box-shadow: none
+
+  &__current-item
+    color: $accent

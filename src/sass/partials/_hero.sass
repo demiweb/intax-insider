@@ -1,8 +1,10 @@
 .hero
+  $this: &
   position: relative
   color: $white
   text-align: center
   &__bg
+    +cover
     +coverdiv
     z-index: 0
     background-color: $gray-light
@@ -60,3 +62,8 @@
       margin-right: 0
       +notlast
         margin-bottom: 10px
+
+  &--sm
+    #{$this}__inner
+      height: auto
+      min-height: 295px
