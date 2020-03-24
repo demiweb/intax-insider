@@ -1,5 +1,6 @@
 {%set
 form = {
+  mod: 'section__form',
   titleSm: 'Оставьте ваши контактные данные ниже',
   btn: {
     title: 'подписаться на рассылку'
@@ -48,14 +49,21 @@ form = {
 <!-- begin section -->
 <section class="section section--light">
   <div class="container">
-    <div class="grid">
-      <div class="_col _col-7">
-        <div class="title title--h1-lg">оформляйте подписку</div>
-        <p>Подписывайтесь на рассылку новостей - и получайте уведомления о новых вебинарах и статьях.</p>
-        <img class="js-lazy" src="" alt="" data-src="./img/iphone.png"/>
+    <div class="grid grid--align-items-center">
+      <div class="_col-7">
+        <div class="grid grid--align-items-center">
+          <div class="_col-7">
+            <h2 class="section__title section__title--mb-sm title title--h2 accent">оформляйте подписку</h2>
+            <p>Подписывайтесь на рассылку новостей - и получайте уведомления о новых вебинарах и статьях.</p>
+          </div>
+          <div class="_col-5">
+            <img class="js-lazy" src="" alt="" data-src="./img/iphone.png"/>
+          </div>
+        </div>       
+        
       </div>
 
-      <div class="_col _col-5">
+      <div class="_col-5">
         {% include "partials/_form.html" %}
       </div>
     </div>
