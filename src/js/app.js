@@ -5,25 +5,25 @@ import 'core-js/features/object/assign'
 import 'core-js/features/object/values'
 import 'intersection-observer'
 import './lib/polyfill'
-import smoothscroll from 'smoothscroll-polyfill'
+// import smoothscroll from 'smoothscroll-polyfill'
 import 'whatwg-fetch'
 
 import sayHello from './lib/sayHello'
 import setHTMLClassNames from './components/setHTMLClassNames'
 import setLazy from './components/setLazy'
 import toggleHeader from './components/Header/Header'
-import scrollTo from './components/scrollTo'
+// import scrollTo from './components/scrollTo'
 import setTextareaHeight from './components/Textarea/Textarea'
 import setSelects from './components/Select/Select'
 import addPersonRegistration from './components/addPersonRegistration'
-import setGallery from './components/Gallery/Gallery'
+// import setGallery from './components/Gallery/Gallery'
 import setInputNmber from './components/setInputNmber'
 
 import classNames from './classNames'
 
-import Tabs from './components/Tabs/Tabs'
+// import Tabs from './components/Tabs/Tabs'
 import Slider from './components/Slider/Slider'
-import Accordion from './components/Accordion/Accordion'
+// import Accordion from './components/Accordion/Accordion'
 import Menu from './components/Menu/Menu'
 import Popup from './components/Popup/Popup'
 
@@ -36,28 +36,28 @@ class App {
     this.dom = {
       body: document.body,
       header: document.querySelector(`.${classNames.header}`),
-      scrollTo: {
-        sections: [...document.querySelectorAll(`.${classNames.scrollTo.section}`)],
-        btns: [...document.querySelectorAll(`.${classNames.scrollTo.btn}`)],
-      },
+      // scrollTo: {
+      //   sections: [...document.querySelectorAll(`.${classNames.scrollTo.section}`)],
+      //   btns: [...document.querySelectorAll(`.${classNames.scrollTo.btn}`)],
+      // },
     }
     this.state = {
       hasMenuOpen: false,
     }
 
-    this.tabs = new Tabs({
-      classNames: {
-        btn: 'program__tab',
-        item: 'program__item',
-      },
-    })
+    // this.tabs = new Tabs({
+    //   classNames: {
+    //     btn: 'program__tab',
+    //     item: 'program__item',
+    //   },
+    // })
     this.slider = new Slider(`.${classNames.slider.container}`)
-    this.accordion = new Accordion({
-      classNames: {
-        btn: 'question__btn',
-        item: 'question__content',
-      },
-    })
+    // this.accordion = new Accordion({
+    //   classNames: {
+    //     btn: 'question__btn',
+    //     item: 'question__content',
+    //   },
+    // })
     this.menu = new Menu({
       classNames: {
         btn: 'burger',
@@ -82,11 +82,11 @@ class App {
       setHTMLClassNames,
       setLazy,
       toggleHeader,
-      scrollTo,
+      // scrollTo,
       setTextareaHeight,
       setSelects,
       addPersonRegistration,
-      setGallery,
+      // setGallery,
       setInputNmber,
     }
 
@@ -94,12 +94,12 @@ class App {
   }
 
   init() {
-    smoothscroll.polyfill()
+    // smoothscroll.polyfill()
     this.initMethods()
 
-    this.tabs.init()
+    // this.tabs.init()
     this.slider.init()
-    this.accordion.init()
+    // this.accordion.init()
     this.menu.init()
     this.popup.init()
   }
