@@ -25,15 +25,19 @@
 
   <div class="card__content">    
     {% if title.under %}
-    <a href="#" class="card__title title title--h3 title-under title-under--light">
-      {{ title.under or 'Чем мы помогаем бизнес-сообществу' }}
-    </a>
+    <h3 class="card__title title title--h3 title-under title-under--light">
+      <a href="#">{{ title.under or 'Чем мы помогаем бизнес-сообществу' }}</a>
+    </h3>
+{#     <a href="#" class="card__title title title--h3 title-under title-under--light">
+      
+    </a> #}
     {% endif %}
 
     {% if title.lg %}
-    <a href="#" class="card__title card__title--lg">
+    <div class="card__title card__title--lg"><a href="#">16.04.2020</a></div>
+{#     <a href="#" class="card__title card__title--lg">
         16.04.2020
-      </a>
+      </a> #}
     {% endif %}
 
     

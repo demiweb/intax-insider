@@ -1,4 +1,6 @@
 .card
+  $this: &
+
   display: block
   background-color: $white
   box-shadow: 0px 0px 10px 0px rgba(1, 0, 0, 0.09)
@@ -20,10 +22,23 @@
   &__content
     display: block
     padding: 35px 20px
+    +lg
+      padding: 20px
+    +md
+      padding: 20px 15px
 
   &__title
     display: block
     margin-bottom: 12px
+    a
+      +hover
+        text-decoration: underline
+    &.title-under
+      a
+        +tr(color .3s)
+        +hover
+          text-decoration: none
+          color: $accent
     &--lg
       color: $accent
       text-transform: uppercase

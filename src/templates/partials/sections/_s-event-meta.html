@@ -22,11 +22,11 @@ blocks = [
 <section class="">
   <div class="container">
     <div class="grid">
-      <div class="_col-6">
-        <img class="shadow js-lazy" src="" alt="" data-src="./img/event-page.jpg"/>
+      <div class="_col-sm-6">
+        <img class="shadow img-full js-lazy" src="" alt="" data-src="./img/event-page.jpg"/>
       </div>
 
-      <div class="_col-6">
+      <div class="_col-sm-6">
         <!-- begin event-meta -->
         <div class="event-meta">
           <div class="event-meta__block">
@@ -51,7 +51,9 @@ blocks = [
             <div class="event-meta__btn">
               {{ mixins.btn(
                 title = 'зарегистрироваться',
-                mod = 'btn--wide-md'
+                mod = 'btn--wide-md js-popup-open',
+                href = false,
+                attributes = { 'data-popup-target': 'registration' }
               ) }}
             </div>
 

@@ -63,9 +63,18 @@ export default class Slider {
       items: {
         navigation,
         spaceBetween: 30,
-        slidesPerView: 3,
+        slidesPerView: 1,
         on: {
           init: onInit,
+        },
+        breakpoints: {
+          576: {
+            slidesPerView: 2,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
         },
       },
     })

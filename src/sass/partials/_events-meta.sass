@@ -7,8 +7,13 @@
     display: flex
     align-items: center
     flex-wrap: wrap
+    +xl
+      display: block
   &__btn
     margin-right: 30px
+    +xl
+      margin-right: 0
+      margin-bottom: 15px
 
 .event-meta-block
   display: flex
@@ -26,6 +31,7 @@
     .icon
       font-size: .8em
   &__content
+    width: calc(100% - 24px)
     padding-left: 15px
   &__title
     font-weight: 700

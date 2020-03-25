@@ -3,6 +3,14 @@
   flex-wrap: wrap
 
   position: relative
+  +before
+    position: absolute
+    z-index: 1
+    top: 0
+    bottom: 0
+    right: 0
+    width: 2px
+    background-color: $white
   +after
     position: absolute
     z-index: 1
@@ -23,8 +31,10 @@
     border-bottom: 1px solid $gray-lightest
     border-right: 1px solid $gray-lightest
 
+    +sm
+      width: 33.33333%
+    +xs
+      width: 50%
+
     img
       max-height: 100%
-
-    &:nth-child(4n - 4)
-      border-right: 0

@@ -5,9 +5,14 @@
     display: inline-block
     margin-left: 50px
     margin-right: 50px
+    +xl
+      margin-right: 30px
+      margin-left: 30px
     +lg
       display: block
       margin-bottom: 1em
+      margin-left: 0
+      margin-right: 0
   a
     +tr(color .3s)
     +hover
@@ -25,3 +30,6 @@
       margin-right: 0
       +notlast
         margin-bottom: em(10)
+      +xl
+        margin-left: 0
+        margin-right: 0

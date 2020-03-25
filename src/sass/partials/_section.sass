@@ -79,12 +79,22 @@
       +md
         display: none
   &__btns
-    @extend .hero__btns
+    // @extend .hero__btns
+    display: flex
     justify-content: center
+    +lg
+      display: block
+      margin-left: 0
+      margin-right: 0
     #{$this}__btn
       // padding-top: 0
       +notlast
         margin-right: 10px
+        +lg
+          margin-right: 0
+      +notfirst
+        +lg
+          margin-top: 10px
   &__btn
     text-align: center
     margin-top: 40px
@@ -109,6 +119,11 @@
     align-items: center
     justify-content: center
     margin-bottom: 30px
+    +lg
+      display: block
+      .title
+        margin-right: 0
+        margin-bottom: 15px
     +md
       margin-bottom: 15px
     .title
@@ -161,13 +176,22 @@
     max-width: 540px
 
 .s-dude
-  // [class*="_col-"]
-  //   position: relative
   margin-top: 200px
+  > .container
+    position: relative
+    z-index: 1
+  +xl
+    margin-top: 100px
+  +lg
+    margin-top: 50px
+  +md
+    margin-top: 0
   &__img
     position: absolute
     z-index: 0
     bottom: 0
     right: 10%
     max-width: 35%
+    +xs
+      display: none
 
