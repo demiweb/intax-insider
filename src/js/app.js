@@ -12,7 +12,7 @@ import sayHello from './lib/sayHello'
 import setHTMLClassNames from './components/setHTMLClassNames'
 import setLazy from './components/setLazy'
 import toggleHeader from './components/Header/Header'
-// import scrollTo from './components/scrollTo'
+import scrollTo from './components/scrollTo'
 import setTextareaHeight from './components/Textarea/Textarea'
 import setSelects from './components/Select/Select'
 import addPersonRegistration from './components/addPersonRegistration'
@@ -36,10 +36,10 @@ class App {
     this.dom = {
       body: document.body,
       header: document.querySelector(`.${classNames.header}`),
-      // scrollTo: {
-      //   sections: [...document.querySelectorAll(`.${classNames.scrollTo.section}`)],
-      //   btns: [...document.querySelectorAll(`.${classNames.scrollTo.btn}`)],
-      // },
+      scrollTo: {
+        sections: [...document.querySelectorAll(`.${classNames.scrollTo.section}`)],
+        btns: [...document.querySelectorAll(`.${classNames.scrollTo.btn}`)],
+      },
     }
     this.state = {
       hasMenuOpen: false,
@@ -82,7 +82,7 @@ class App {
       setHTMLClassNames,
       setLazy,
       toggleHeader,
-      // scrollTo,
+      scrollTo,
       setTextareaHeight,
       setSelects,
       addPersonRegistration,

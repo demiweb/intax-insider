@@ -6,9 +6,9 @@ const classNames = classes.scrollTo
 
 export default app => {
   const BODY = app.dom.body
-  const { sections, btns } = app.dom.scrollTo
+  // const { sections, btns } = app.dom.scrollTo
   const { header } = app.dom
-  const navLinkClass = 'nav__link'
+  // const navLinkClass = 'nav__link'
 
   function handleClick(e) {
     const btn = e.target.closest(`.${classNames.btn}`) || e.target.closest(`.${classNames.top}`)
@@ -38,32 +38,32 @@ export default app => {
     }
   }
 
-  function handleIntersecting(entries) {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const { id } = entry.target
+  // function handleIntersecting(entries) {
+  //   entries.forEach(entry => {
+  //     if (entry.isIntersecting) {
+  //       const { id } = entry.target
 
-        const [currentBtn] = btns.filter(btn => btn.getAttribute('href') === `#${id}`)
+  //       const [currentBtn] = btns.filter(btn => btn.getAttribute('href') === `#${id}`)
 
-        btns.forEach(btn => {
-          if (btn !== currentBtn) BEMblock(btn, navLinkClass).removeMod(IS_CURRENT)
-          BEMblock(currentBtn, navLinkClass).addMod(IS_CURRENT)
-        })
-      }
-    })
-  }
+  //       btns.forEach(btn => {
+  //         if (btn !== currentBtn) BEMblock(btn, navLinkClass).removeMod(IS_CURRENT)
+  //         BEMblock(currentBtn, navLinkClass).addMod(IS_CURRENT)
+  //       })
+  //     }
+  //   })
+  // }
 
-  function initIntersecting() {
-    if (!sections.length || !btns.length) return
+  // function initIntersecting() {
+  //   if (!sections.length || !btns.length) return
 
-    const observer = new IntersectionObserver(handleIntersecting, {
-      threshold: 0.2,
-    })
-    sections.forEach(section => {
-      observer.observe(section)
-    })
-  }
+  //   const observer = new IntersectionObserver(handleIntersecting, {
+  //     threshold: 0.2,
+  //   })
+  //   sections.forEach(section => {
+  //     observer.observe(section)
+  //   })
+  // }
 
   document.addEventListener('click', handleClick)
-  initIntersecting()
+  // initIntersecting()
 }
