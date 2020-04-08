@@ -18,6 +18,7 @@ import setSelects from './components/Select/Select'
 import addPersonRegistration from './components/addPersonRegistration'
 // import setGallery from './components/Gallery/Gallery'
 import setInputNmber from './components/setInputNmber'
+import handleMenuLinkClick from './components/handleMenuLinkClick'
 
 import classNames from './classNames'
 
@@ -88,6 +89,7 @@ class App {
       addPersonRegistration,
       // setGallery,
       setInputNmber,
+      handleMenuLinkClick,
     }
 
     Object.values(this.methods).forEach(fn => fn(this))
