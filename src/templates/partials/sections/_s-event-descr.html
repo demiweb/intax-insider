@@ -25,10 +25,9 @@
         
         <!-- should be removed on production version -->
         <select id="speakers" style="width: 100px;">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
+          {% for i in range(0, 10) %}
+          <option value="{{ i + 1 }}">{{ i + 1}}</option>
+          {% endfor %}
         </select>
         <!-- should be removed on production version -->
 
